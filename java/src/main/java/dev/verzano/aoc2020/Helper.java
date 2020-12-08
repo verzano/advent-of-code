@@ -5,7 +5,9 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class Helper {
-    private Helper() {}
+    private Helper() {
+
+    }
 
     public static String getResourceAsString(String file) {
         try {
