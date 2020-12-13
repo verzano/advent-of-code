@@ -1,6 +1,9 @@
 package dev.verzano.aoc2020.day8;
 
 import dev.verzano.aoc2020.Helper;
+
+import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
@@ -21,6 +24,10 @@ public class Day8Part2 {
             this.idx = idx;
         }
 
+        public Instruction duplicate() {
+            return new Instruction(operation, value, idx);
+        }
+
         public ProgramState execute(ProgramState programState) {
             timesPerformed++;
             return switch (operation) {
@@ -38,19 +45,34 @@ public class Day8Part2 {
                 .map(l -> {
                     var pair = l.split(" ");
                     return new Instruction(Operation.valueOf(pair[0]), Integer.parseInt(pair[1]), idx.getAndIncrement());
-                })
-                .collect(Collectors.toList());
+                }).collect(Collectors.toList());
 
-        var programState = new ProgramState(0, 0);
-        while (instructions.get(programState.idx).timesPerformed < 2) {
-            programState = instructions.get(programState.idx).execute(programState);
+        for (Instruction instruction : instructions) {
+            var modifiedInstructions = instructions.stream()
+                    .map(Instruction::duplicate)
+                    .collect(Collectors.toList());
+            switch (instruction.operation) {
+                case acc: continue;
+                case jmp:
+                    modifiedInstructions.set(
+                            instruction.idx,
+                            new Instruction(Operation.nop, instruction.value, instruction.idx));
+                    break;
+                case nop:
+                    modifiedInstructions.set(
+                            instruction.idx,
+                            new Instruction(Operation.jmp, instruction.value, instruction.idx));
+                    break;
+            }
+
+            var programState = new ProgramState(0, 0);
+            while (modifiedInstructions.get(programState.idx).timesPerformed < 2) {
+                programState = modifiedInstructions.get(programState.idx).execute(programState);
+                if (programState.idx >= modifiedInstructions.size()) {
+                    System.out.println("Final Program State: " + programState);
+                    return;
+                }
+            }
         }
-
-        var loop = instructions.stream()
-                .filter(i -> i.timesPerformed > 1)
-                .filter(i -> i.operation != Operation.acc)
-                .collect(Collectors.toList());
-
-        System.out.println("Final Program State: " + programState);
     }
 }
