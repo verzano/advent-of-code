@@ -7,6 +7,7 @@ import java.util.List;
 import static dev.verzano.adventofcode.Helper.getResourceAsIntegerList;
 import static dev.verzano.adventofcode.twenty21.day06.Day06.part1;
 import static dev.verzano.adventofcode.twenty21.day06.Day06.part2;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Day06Test {
     private static final List<Integer> testData = List.of(3, 4, 3, 1, 2);

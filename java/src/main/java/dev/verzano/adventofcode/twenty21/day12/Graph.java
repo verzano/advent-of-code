@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty21.day12;
 
 import java.util.HashMap;
 
-import static dev.verzano.adventofcode.day12.Cave.makeAdjacent;
+import static dev.verzano.adventofcode.twenty21.day12.Cave.makeAdjacent;
 
 public class Graph {
     private final HashMap<String, Cave> caves = new HashMap<>();

@@ -48,4 +48,15 @@ public class Helper {
                 .toList()
                 .toArray(new char[][]{});
     }
+
+    public static int[][] getResourceAsIntMatrix(String file) {
+        var chars = getResourceAsCharMatrix(file);
+        var ints = new int[chars.length][chars[0].length];
+        for (var i = 0; i < ints.length; i++) {
+            for (var j = 0; j < ints[i].length; j++) {
+                ints[i][j] = Integer.parseInt(chars[i][j] + "");
+            }
+        }
+        return ints;
+    }
 }

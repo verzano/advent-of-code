@@ -3,7 +3,7 @@ package dev.verzano.adventofcode.twenty21.day13;
 import java.util.LinkedList;
 import java.util.List;
 
-import static dev.verzano.adventofcode.day13.Axis.fromChar;
+import static dev.verzano.adventofcode.twenty21.day13.Axis.fromChar;
 import static java.lang.Integer.parseInt;
 
 public class Instructions {
