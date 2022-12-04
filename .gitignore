@@ -1,6 +1,9 @@
 .idea
-java/.gradle
 
-gradle
+# java ignore
+java/gradle/
+java/.gradle/
+java/build/
 
-java/build
+# cpp ignore
+cpp/cmake-build-debug/
