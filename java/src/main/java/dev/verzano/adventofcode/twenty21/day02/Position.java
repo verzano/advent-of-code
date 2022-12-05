@@ -1,7 +1,7 @@
 package dev.verzano.adventofcode.twenty21.day02;
 
 public record Position(int horizontalPosition, int depth, int aim) {
-    public static Position defaultPosition() {
+    protected static Position defaultPosition() {
         return new Position(0, 0, 0);
     }
 

@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public record WinningState(Map<Integer, State> boardState, int finalNum) {
-    public static final WinningState NULL = new WinningState(null, 0);
+    protected static final WinningState NULL = new WinningState(null, 0);
 
     public int finalScore() {
         return boardState.entrySet().stream()

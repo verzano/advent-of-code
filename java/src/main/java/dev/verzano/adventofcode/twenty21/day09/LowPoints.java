@@ -43,7 +43,7 @@ public final class LowPoints {
                 "lps=" + lps + ']';
     }
 
-    public static boolean isLowPoint(int[][] map, int r, int c) {
+    protected static boolean isLowPoint(int[][] map, int r, int c) {
         var p = map[r][c];
         if (r > 0 && p >= map[r - 1][c]) {
             return false;

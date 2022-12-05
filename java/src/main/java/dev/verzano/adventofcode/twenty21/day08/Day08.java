@@ -3,7 +3,7 @@ package dev.verzano.adventofcode.twenty21.day08;
 import java.util.List;
 
 public class Day08 {
-    public static int part1(List<SignalLine> signals) {
+    protected static int part1(List<SignalLine> signals) {
         var _1s4s7sAnd8s = 0;
         for (var outputs : signals.stream().map(SignalLine::outputs).toList()) {
             _1s4s7sAnd8s += outputs.stream().filter(Signal::is147or8).count();
@@ -11,7 +11,7 @@ public class Day08 {
         return _1s4s7sAnd8s;
     }
 
-    public static Day08State part2(List<SignalLine> signals) {
+    protected static Day08State part2(List<SignalLine> signals) {
         var state = new Day08State();
         for (var sl : signals) {
             var one = sl.get1();

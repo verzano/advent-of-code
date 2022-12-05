@@ -1,7 +1,7 @@
 package dev.verzano.adventofcode.twenty21.day11;
 
 public class Day11 {
-    public static Octopi part1(int[][] input, int steps) {
+    protected static Octopi part1(int[][] input, int steps) {
         var octopi = new Octopi(input);
 
         System.out.println("Before any steps:\n" + octopi.prettyPrint());
@@ -14,7 +14,7 @@ public class Day11 {
         return octopi;
     }
 
-    public static int part2(int[][] input) {
+    protected static int part2(int[][] input) {
         var octopi = new Octopi(input);
 
         var step = 0;

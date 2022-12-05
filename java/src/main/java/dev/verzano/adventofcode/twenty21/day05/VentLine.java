@@ -4,7 +4,7 @@ import static java.lang.Integer.parseInt;
 import static java.util.Arrays.stream;
 
 public record VentLine(Vent a, Vent b) {
-    public static VentLine fromString(String s) {
+    protected static VentLine fromString(String s) {
         var vents = stream(s.split(" -> "))
                 .map(coordsS -> {
                     var coords = coordsS.split(",");

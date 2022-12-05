@@ -35,7 +35,7 @@ public record SignalMapping(Character a, Character b, Character c, Character d, 
         }
     }
 
-    public static Character getA(Signal one, Signal seven) {
+    protected static Character getA(Signal one, Signal seven) {
         for (var c : seven.pattern().toCharArray()) {
             if (one.pattern().indexOf(c) == -1) {
                 return c;
@@ -45,7 +45,7 @@ public record SignalMapping(Character a, Character b, Character c, Character d, 
         throw new RuntimeException("Failed to get a");
     }
 
-    public static Character getB(Signal three, Signal nine) {
+    protected static Character getB(Signal three, Signal nine) {
         List<Character> threeCs = three.getPatternCharList();
         List<Character> nineCs = nine.getPatternCharList();
 
@@ -58,7 +58,7 @@ public record SignalMapping(Character a, Character b, Character c, Character d, 
         return nineCs.get(0);
     }
 
-    public static Character getC(Signal six, Signal eight) {
+    protected static Character getC(Signal six, Signal eight) {
         List<Character> sixCs = six.getPatternCharList();
         List<Character> eightCs = eight.getPatternCharList();
         eightCs.removeAll(sixCs);
@@ -70,7 +70,7 @@ public record SignalMapping(Character a, Character b, Character c, Character d, 
         return eightCs.get(0);
     }
 
-    public static Character getD(Signal one, Signal four, Character b) {
+    protected static Character getD(Signal one, Signal four, Character b) {
         List<Character> oneCs = one.getPatternCharList();
         List<Character> fourCs = four.getPatternCharList();
 
@@ -84,7 +84,7 @@ public record SignalMapping(Character a, Character b, Character c, Character d, 
         return fourCs.get(0);
     }
 
-    public static Character getE(Signal eight, Signal nine) {
+    protected static Character getE(Signal eight, Signal nine) {
         List<Character> eightCs = eight.getPatternCharList();
         List<Character> nineCs = nine.getPatternCharList();
 
@@ -97,7 +97,7 @@ public record SignalMapping(Character a, Character b, Character c, Character d, 
         return eightCs.get(0);
     }
 
-    public static Character getF(Signal one, Character c) {
+    protected static Character getF(Signal one, Character c) {
         List<Character> oneCs = one.getPatternCharList();
 
         oneCs.remove(c);
@@ -109,7 +109,7 @@ public record SignalMapping(Character a, Character b, Character c, Character d, 
         return oneCs.get(0);
     }
 
-    public static Character getG(Signal four, Signal nine, Character a) {
+    protected static Character getG(Signal four, Signal nine, Character a) {
         List<Character> fourCs = four.getPatternCharList();
         List<Character> nineCs = nine.getPatternCharList();
 

@@ -26,7 +26,7 @@ public class Basins {
                 .reduce(1, (a, b) -> a * b);
     }
 
-    public static Basin buildBasin(int[][] map, int r, int c) {
+    protected static Basin buildBasin(int[][] map, int r, int c) {
         var basin = new Basin();
         basin.addPoint(r, c);
         return buildBasinInternal(basin, map, r, c);

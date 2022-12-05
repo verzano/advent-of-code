@@ -3,7 +3,7 @@ package dev.verzano.adventofcode.twenty21.day02;
 import java.util.List;
 
 public class Day02 {
-    public static Position part1(List<Move> moves) {
+    protected static Position part1(List<Move> moves) {
         var position = Position.defaultPosition();
 
         for (var move : moves) {
@@ -13,7 +13,7 @@ public class Day02 {
         return position;
     }
 
-    public static Position part2(List<Move> moves) {
+    protected static Position part2(List<Move> moves) {
         var position = Position.defaultPosition();
 
         for (var move : moves) {

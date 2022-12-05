@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public record GameInput(List<Integer> nums, List<GameBoard> boards) {
-    public static GameInput fromStringList(List<String> inputStrings) {
+    protected static GameInput fromStringList(List<String> inputStrings) {
         var nums = Arrays.stream(inputStrings.get(0).split(","))
                 .map(Integer::parseInt)
                 .toList();

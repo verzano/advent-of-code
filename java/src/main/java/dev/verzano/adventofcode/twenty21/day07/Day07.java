@@ -3,7 +3,7 @@ package dev.verzano.adventofcode.twenty21.day07;
 import java.util.List;
 
 public class Day07 {
-    public static int part1(List<Integer> crabs) {
+    protected static int part1(List<Integer> crabs) {
         crabs = crabs.stream().sorted().toList();
         var fuelToUse = 0;
         for (var i = 0; i < crabs.size() / 2; i++) {
@@ -13,7 +13,7 @@ public class Day07 {
         return fuelToUse;
     }
 
-    public static int part2(List<Integer> crabs) {
+    protected static int part2(List<Integer> crabs) {
         var rightBound = Integer.MIN_VALUE;
         for (var c : crabs) {
             rightBound = Math.max(rightBound, c);

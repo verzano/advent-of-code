@@ -68,7 +68,7 @@ public record SignalLine(List<Signal> inputs, List<Signal> outputs) {
         return Integer.parseInt(sb.toString());
     }
 
-    public static boolean containsAll(Signal a, Signal b) {
+    protected static boolean containsAll(Signal a, Signal b) {
         for (Character c : b.getPatternChars()) {
             if (a.pattern().indexOf(c) == -1) {
                 return false;
@@ -78,7 +78,7 @@ public record SignalLine(List<Signal> inputs, List<Signal> outputs) {
         return true;
     }
 
-    public static SignalLine fromString(String signalsString) {
+    protected static SignalLine fromString(String signalsString) {
         var parts = signalsString.split(" \\| ");
         return new SignalLine(Arrays.stream(parts[0].split(" ")).map(Signal::new).toList(),
                 Arrays.stream(parts[1].split(" ")).map(Signal::new).toList());

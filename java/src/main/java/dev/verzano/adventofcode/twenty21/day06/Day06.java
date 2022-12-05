@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Day06 {
-    public static List<Integer> part1(List<Integer> fish, int nDays) {
+    protected static List<Integer> part1(List<Integer> fish, int nDays) {
         for (var i = 0; i < nDays; i++) {
             var _fish = new LinkedList<Integer>();
             for (var f : fish) {
@@ -23,7 +23,7 @@ public class Day06 {
         return fish;
     }
 
-    public static Map<Integer, Long> part2(List<Integer> fish, int nDays) {
+    protected static Map<Integer, Long> part2(List<Integer> fish, int nDays) {
         var fishMap = new HashMap<Integer, Long>();
         for (Integer integer : fish) {
             fishMap.compute(integer, (k, v) -> v == null ? 1L : v + 1L);

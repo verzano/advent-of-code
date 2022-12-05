@@ -4,11 +4,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Day01 {
-    public static int part1(List<Integer> depths) {
+    protected static int part1(List<Integer> depths) {
         return calculateIncreases(depths);
     }
 
-    public static int part2(List<Integer> depths) {
+    protected static int part2(List<Integer> depths) {
         var groupedDepths = new LinkedList<Integer>();
 
         for (var i = 0; i < depths.size() - 2; i++) {

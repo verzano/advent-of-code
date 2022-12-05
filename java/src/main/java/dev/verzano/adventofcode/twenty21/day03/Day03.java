@@ -8,7 +8,7 @@ import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
 
 public class Day03 {
-    public static DiagnosticReport part1(char[][] data) {
+    protected static DiagnosticReport part1(char[][] data) {
         var bits = new int[data[0].length];
         Arrays.fill(bits, 0);
 
@@ -29,7 +29,7 @@ public class Day03 {
         return new DiagnosticReport(gamma, epsilon, 0, 0);
     }
 
-    public static DiagnosticReport part2(char[][] data) {
+    protected static DiagnosticReport part2(char[][] data) {
         var oxyData = Arrays.copyOf(data, data.length);
         var col = 0;
         while (oxyData.length > 1) {

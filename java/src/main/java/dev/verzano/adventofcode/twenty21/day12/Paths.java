@@ -29,7 +29,7 @@ public class Paths {
                 .collect(Collectors.joining("\n"));
     }
 
-    public static Paths findPaths(Cave start, boolean doubleVisit) {
+    protected static Paths findPaths(Cave start, boolean doubleVisit) {
         var paths = new Paths(start);
         while (paths.incomplete()) {
             for (var p : paths.getCopy()) {

@@ -38,7 +38,7 @@ public class Cave {
         adjacentCaves.add(cave);
     }
 
-    public static void makeAdjacent(Cave a, Cave b) {
+    protected static void makeAdjacent(Cave a, Cave b) {
         a.addAdjacentCave(b);
         b.addAdjacentCave(a);
     }
