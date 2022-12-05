@@ -3,7 +3,7 @@ package dev.verzano.adventofcode.twenty22.day03;
 import java.util.List;
 
 public class Day03 {
-    public static int part1(List<String> rucksackList) {
+    protected static int part1(List<String> rucksackList) {
         return rucksackList.stream()
                 .map(Rucksack::fromItemString)
                 .map(Rucksack::findDuplicateItem)
@@ -11,7 +11,7 @@ public class Day03 {
                 .sum();
     }
 
-    public static int part2(List<String> rucksackList) {
+    protected static int part2(List<String> rucksackList) {
         var rucksacks = rucksackList.stream()
                 .map(Rucksack::fromItemString)
                 .toList();
