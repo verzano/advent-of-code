@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Day01 {
+class Day01 {
     protected static Elf part1(List<String> calorieStrings) {
         var elves = convertToElves(calorieStrings);
         elves.sort(Comparator.comparingInt(Elf::totalCarried).reversed());

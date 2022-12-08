@@ -7,14 +7,15 @@ import java.util.HashMap;
 
 import static dev.verzano.adventofcode.Helper.getResourceAsStringList;
 
-public class Day7Part2 {
+class Day7Part2 {
     record Bag(String color, Collection<HoldeePair> holdees) {
         public void addHoldeePair(HoldeePair holdeePair) {
             holdees.add(holdeePair);
         }
     }
 
-    record HoldeePair(int count, Bag bag) {}
+    record HoldeePair(int count, Bag bag) {
+    }
 
     public static void main(String[] args) {
 

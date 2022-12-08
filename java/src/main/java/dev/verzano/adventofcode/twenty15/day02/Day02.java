@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty15.day02;
 
 import java.util.List;
 
-public class Day02 {
+class Day02 {
     protected static long part1(List<String> dimensions) {
         var totalSurfaceArea = 0;
         for (var dimensionString : dimensions) {

@@ -3,7 +3,7 @@ package dev.verzano.adventofcode.twenty15.day04;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 
-public class Day04 {
+class Day04 {
     protected static int part1(String prefix) {
         return findSuffix(prefix, "00000");
     }

@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty20.day1;
 
 import static dev.verzano.adventofcode.Helper.getResourceAsIntegerList;
 
-public class Day1Part2 {
+class Day1Part2 {
     public static void main(String[] args) {
         var lines = getResourceAsIntegerList("twenty20/day1/input.txt");
 

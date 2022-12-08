@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty22.day04;
 
 import java.util.List;
 
-public class Day04 {
+class Day04 {
     protected static long part1(List<String> assignmentsList) {
         return assignmentsList.stream()
                 .map(AssignmentPair::fromString)

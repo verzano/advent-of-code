@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Day10Part2 {
+class Day10Part2 {
     public static void main(String[] args) {
         var adapters = Helper.getResourceAsIntegerList("twenty20/day10/input.txt")
                 .stream()

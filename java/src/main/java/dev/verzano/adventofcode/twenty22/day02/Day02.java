@@ -3,7 +3,7 @@ package dev.verzano.adventofcode.twenty22.day02;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Day02 {
+class Day02 {
     protected static int part1(char[][] strategyGuide) {
         return convertToRounds(strategyGuide, Mode.FOR_MOVE)
                 .stream()

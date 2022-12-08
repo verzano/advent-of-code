@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty21.day04;
 
 import java.util.LinkedList;
 
-public class Day04 {
+class Day04 {
     protected static WinningState part1(GameInput input) {
         for (var num : input.nums()) {
             for (var board : input.boards()) {

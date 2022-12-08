@@ -3,7 +3,7 @@ package dev.verzano.adventofcode.twenty21.day08;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Day08State {
+class Day08State {
     private final List<SignalPair> signalPairs = new LinkedList<>();
 
     public void addState(SignalLine sl, SignalMapping sm) {

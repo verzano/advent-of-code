@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-public class Day06 {
+class Day06 {
     protected static List<Integer> part1(List<Integer> fish, int nDays) {
         for (var i = 0; i < nDays; i++) {
             var _fish = new LinkedList<Integer>();

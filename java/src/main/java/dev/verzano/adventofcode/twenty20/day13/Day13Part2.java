@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.stream.Collectors;
 
-public class Day13Part2 {
+class Day13Part2 {
     record BusId(long id, long offset) {
     }
 

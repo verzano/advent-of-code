@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty21.day12;
 
 import java.util.List;
 
-public class Day12 {
+class Day12 {
     protected static Paths part1(List<String> input) {
         var g = new Graph();
         for (var s : input) {

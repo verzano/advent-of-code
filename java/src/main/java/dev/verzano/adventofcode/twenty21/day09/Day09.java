@@ -3,7 +3,7 @@ package dev.verzano.adventofcode.twenty21.day09;
 import static dev.verzano.adventofcode.twenty21.day09.Basins.buildBasin;
 import static dev.verzano.adventofcode.twenty21.day09.LowPoints.isLowPoint;
 
-public class Day09 {
+class Day09 {
     protected static LowPoints part1(int[][] input) {
         var lps = new LowPoints();
 

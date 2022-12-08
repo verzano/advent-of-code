@@ -4,7 +4,7 @@ import java.util.stream.Collectors;
 
 import static dev.verzano.adventofcode.Helper.getResourceAsStringList;
 
-public class Day5Part2 {
+class Day5Part2 {
     public static void main(String[] args) {
         var seatIds = getResourceAsStringList("twenty20/day5/input.txt")
                 .stream()

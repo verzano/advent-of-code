@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty20.day2;
 
 import static dev.verzano.adventofcode.Helper.getResourceAsStringList;
 
-public class Day2Part2 {
+class Day2Part2 {
     public static void main(String[] args) {
         record PasswordThing(int i1, int i2, char c, String password) {
             public boolean isValid() {

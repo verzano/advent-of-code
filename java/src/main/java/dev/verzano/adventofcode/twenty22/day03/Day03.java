@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty22.day03;
 
 import java.util.List;
 
-public class Day03 {
+class Day03 {
     protected static int part1(List<String> rucksackList) {
         return rucksackList.stream()
                 .map(Rucksack::fromItemString)

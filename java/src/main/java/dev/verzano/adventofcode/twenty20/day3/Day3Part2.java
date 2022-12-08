@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty20.day3;
 
 import dev.verzano.adventofcode.Helper;
 
-public class Day3Part2 {
+class Day3Part2 {
     public static void main(String[] args) {
         var map = Helper.getResourceAsStringList("twenty20/day3/intput.txt")
                 .stream()

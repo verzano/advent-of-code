@@ -1,6 +1,6 @@
 package dev.verzano.adventofcode.twenty15.day01;
 
-public class Day01 {
+class Day01 {
     protected static int part1(String directions) {
         int floor = 0;
         for (var c : directions.toCharArray()) {

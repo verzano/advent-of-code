@@ -1,6 +1,6 @@
 package dev.verzano.adventofcode.twenty21.day13;
 
-public class Day13 {
+class Day13 {
     protected static Matrix part1(Instructions instructions) {
         return instructions.foldOnce();
     }

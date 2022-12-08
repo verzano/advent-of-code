@@ -1,6 +1,6 @@
 package dev.verzano.adventofcode.twenty21.day14;
 
-public class Day14 {
+class Day14 {
     protected static Day14State part1(Day14State state) {
         var pt = state.polymerTemplate();
         for (var i = 0; i < 10; i++) {

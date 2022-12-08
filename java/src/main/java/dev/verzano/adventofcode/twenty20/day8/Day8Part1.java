@@ -2,10 +2,11 @@ package dev.verzano.adventofcode.twenty20.day8;
 
 import dev.verzano.adventofcode.Helper;
 
-public class Day8Part1 {
-    enum Operation { nop, acc, jmp }
+class Day8Part1 {
+    enum Operation {nop, acc, jmp}
 
-    record ProgramState(int idx, int acc) { }
+    record ProgramState(int idx, int acc) {
+    }
 
     static class Instruction {
         private final Operation operation;

@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty21.day05;
 
 import java.util.List;
 
-public class Day05 {
+class Day05 {
     protected static SeaFloor part1(List<VentLine> vls) {
         final var sf = new SeaFloor();
         vls.forEach(sf::addHorizontalVentLine);

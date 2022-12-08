@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty22.day06;
 
 import java.util.HashSet;
 
-public class Day06 {
+class Day06 {
     protected static int part1(String dataStream) {
         final int markerLength = 4;
 

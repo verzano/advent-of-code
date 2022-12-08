@@ -4,7 +4,7 @@ import dev.verzano.adventofcode.Helper;
 
 import java.util.Arrays;
 
-public class Day11Part2 {
+class Day11Part2 {
     public static void main(String[] args) {
         var seatMap = Helper.getResourceAsStringList("twenty20/day11/input.txt")
                 .stream()

@@ -1,6 +1,6 @@
 package dev.verzano.adventofcode.twenty21.day11;
 
-public class Day11 {
+class Day11 {
     protected static Octopi part1(int[][] input, int steps) {
         var octopi = new Octopi(input);
 

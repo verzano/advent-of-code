@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.regex.Pattern;
 
-public class Day14Part1 {
+class Day14Part1 {
     record Bitmask(long value, boolean doOr) {
         public long apply(long input) {
             if (doOr) {

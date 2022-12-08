@@ -3,7 +3,7 @@ package dev.verzano.adventofcode.twenty21.day01;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Day01 {
+class Day01 {
     protected static int part1(List<Integer> depths) {
         return calculateIncreases(depths);
     }

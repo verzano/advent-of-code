@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty20.day4;
 
 import static dev.verzano.adventofcode.Helper.getResourceAsStringList;
 
-public class Day4Part1 {
+class Day4Part1 {
     public static void main(String[] args) {
         record Passport(
                 String byr,

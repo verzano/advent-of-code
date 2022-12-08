@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty15.day05;
 
 import java.util.List;
 
-public class Day05 {
+class Day05 {
     protected static int part1(List<String> strings) {
         var niceCount = 0;
         for (var s : strings) {

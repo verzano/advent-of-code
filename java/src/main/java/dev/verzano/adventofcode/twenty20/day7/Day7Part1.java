@@ -4,7 +4,7 @@ import java.util.*;
 
 import static dev.verzano.adventofcode.Helper.getResourceAsStringList;
 
-public class Day7Part1 {
+class Day7Part1 {
     record Bag(String color, Collection<Bag> heldBy) {
         public void addHolder(Bag bag) {
             heldBy.add(bag);

@@ -5,15 +5,15 @@ import dev.verzano.adventofcode.Helper;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-public class Day6Part1 {
+class Day6Part1 {
     public static void main(String[] args) {
         var unique = Arrays.stream(Helper.getResourceAsString("twenty20/day6/input.txt")
-                .replace("\n\n", "\t")
-                .replace("\n", "")
-                .split("\t"))
+                        .replace("\n\n", "\t")
+                        .replace("\n", "")
+                        .split("\t"))
                 .map(l -> l.chars()
                         .distinct()
-                        .mapToObj(i -> String.valueOf((char)i))
+                        .mapToObj(i -> String.valueOf((char) i))
                         .collect(Collectors.joining()))
                 .collect(Collectors.joining())
                 .length();

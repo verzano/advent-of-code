@@ -4,7 +4,7 @@ import dev.verzano.adventofcode.Helper;
 
 import java.util.List;
 
-public class Day9Part2 {
+class Day9Part2 {
     private static final int BAD_ENTRY = 29221323;
 
     public static void main(String[] args) {

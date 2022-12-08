@@ -7,7 +7,7 @@ import static java.lang.String.copyValueOf;
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
 
-public class Day03 {
+class Day03 {
     protected static DiagnosticReport part1(char[][] data) {
         var bits = new int[data[0].length];
         Arrays.fill(bits, 0);

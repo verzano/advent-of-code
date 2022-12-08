@@ -1,9 +1,8 @@
 package dev.verzano.adventofcode.twenty15.day03;
 
 import java.util.HashSet;
-import java.util.Objects;
 
-public class Day03 {
+class Day03 {
     protected static int part1(String directions) {
         var location = new Location();
         var houses = new HashSet<String>();

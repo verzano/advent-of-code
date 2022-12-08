@@ -5,10 +5,11 @@ import dev.verzano.adventofcode.Helper;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
-public class Day8Part2 {
-    enum Operation { nop, acc, jmp }
+class Day8Part2 {
+    enum Operation {nop, acc, jmp}
 
-    record ProgramState(int idx, int acc) { }
+    record ProgramState(int idx, int acc) {
+    }
 
     static class Instruction {
         private final Operation operation;

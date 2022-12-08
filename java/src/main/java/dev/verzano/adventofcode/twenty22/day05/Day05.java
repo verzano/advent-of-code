@@ -3,7 +3,7 @@ package dev.verzano.adventofcode.twenty22.day05;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Day05 {
+class Day05 {
     protected static String part1(List<String> input) {
         var cargoAreaStrings = new LinkedList<String>();
         while (!input.get(0).isBlank()) {

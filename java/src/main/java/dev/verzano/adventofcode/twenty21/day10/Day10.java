@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty21.day10;
 
 import java.util.List;
 
-public class Day10 {
+class Day10 {
     protected static Lines part1(List<String> input) {
         var lines = new Lines();
         input.forEach(lines::addLine);

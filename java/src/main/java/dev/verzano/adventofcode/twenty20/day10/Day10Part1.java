@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty20.day10;
 
 import dev.verzano.adventofcode.Helper;
 
-public class Day10Part1 {
+class Day10Part1 {
     public static void main(String[] args) {
         var adapters = Helper.getResourceAsStringList("twenty20/day10/input.txt")
                 .stream()

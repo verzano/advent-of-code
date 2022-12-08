@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty20.day12;
 
 import dev.verzano.adventofcode.Helper;
 
-public class Day12Part2 {
+class Day12Part2 {
     enum Action {
         N, S, E, W,
         L, R,

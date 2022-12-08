@@ -4,7 +4,7 @@ import dev.verzano.adventofcode.Helper;
 
 import java.util.Arrays;
 
-public class Day13Part1 {
+class Day13Part1 {
     public static void main(String[] args) {
         var input = Helper.getResourceAsStringList("twenty20/day13/input.txt");
         var earliestLeaveTime = Integer.parseInt(input.get(0));

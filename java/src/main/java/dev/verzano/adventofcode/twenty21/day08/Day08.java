@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty21.day08;
 
 import java.util.List;
 
-public class Day08 {
+class Day08 {
     protected static int part1(List<SignalLine> signals) {
         var _1s4s7sAnd8s = 0;
         for (var outputs : signals.stream().map(SignalLine::outputs).toList()) {

@@ -2,7 +2,7 @@ package dev.verzano.adventofcode.twenty21.day07;
 
 import java.util.List;
 
-public class Day07 {
+class Day07 {
     protected static int part1(List<Integer> crabs) {
         crabs = crabs.stream().sorted().toList();
         var fuelToUse = 0;

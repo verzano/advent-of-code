@@ -4,7 +4,7 @@ import dev.verzano.adventofcode.Helper;
 
 import java.util.List;
 
-public class Day9Part1 {
+class Day9Part1 {
     private static final int PREAMBLE_LENGTH = 25;
 
     public static void main(String[] args) {
