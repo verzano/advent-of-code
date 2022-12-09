@@ -3,7 +3,7 @@ package dev.verzano.adventofcode.twenty22.day09;
 import java.util.HashSet;
 import java.util.Set;
 
-public class PositionHistory {
+class PositionHistory {
     private Position current;
     private final Set<Position> positionHistory = new HashSet<>();
 

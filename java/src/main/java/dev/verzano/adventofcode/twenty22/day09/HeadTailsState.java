@@ -3,7 +3,7 @@ package dev.verzano.adventofcode.twenty22.day09;
 import java.util.LinkedList;
 import java.util.stream.IntStream;
 
-public class HeadTailsState {
+class HeadTailsState {
     private final PositionHistory head = new PositionHistory();
     private final LinkedList<PositionHistory> tailSegments = new LinkedList<>();
 
