@@ -1,9 +1,5 @@
 package dev.verzano.adventofcode.twenty22.day11;
 
-import java.math.BigInteger;
-
-import static java.math.BigInteger.ZERO;
-
 record Test(long divisor, int trueMonkey, int falseMonkey) {
     int getMonkeyToThrowTo(long worryLevel) {
         return worryLevel % divisor == 0 ? trueMonkey : falseMonkey;
