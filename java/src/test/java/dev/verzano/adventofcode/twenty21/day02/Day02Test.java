@@ -54,7 +54,7 @@ class Day02Test {
     private static List<Move> convertToMoves(List<String> stringMoves) {
         return stringMoves.stream()
                 .map(s -> s.split(" "))
-                .map(s -> new Move(Direction.forString(s[0]), Integer.parseInt(s[1])))
+                .map(s -> new Move(Direction.fromString(s[0]), Integer.parseInt(s[1])))
                 .toList();
     }
 }

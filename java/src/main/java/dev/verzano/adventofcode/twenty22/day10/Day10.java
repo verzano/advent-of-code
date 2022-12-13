@@ -5,14 +5,14 @@ import java.util.Set;
 
 class Day10 {
     protected static int part1(List<String> instructionStrings) {
-        var program = Program.forStrings(instructionStrings);
+        var program = Program.fromStrings(instructionStrings);
         var runner = new ProgramRunner();
         runner.executeForSignalStrength(program, Set.of(20, 60, 100, 140, 180, 220));
         return runner.getSignalStrength();
     }
 
     protected static int part2(List<String> instructionStrings) {
-        var program = Program.forStrings(instructionStrings);
+        var program = Program.fromStrings(instructionStrings);
         var runner = new ProgramRunner();
         runner.executeForCRTImage(program, 40);
         return runner.getSignalStrength();

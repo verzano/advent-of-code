@@ -9,7 +9,7 @@ enum Operation {
         this.cycles = cycles;
     }
 
-    public static Operation forString(String s) {
+    public static Operation fromString(String s) {
         return switch (s) {
             case "noop" -> NO_OP;
             case "addx" -> ADD_X;

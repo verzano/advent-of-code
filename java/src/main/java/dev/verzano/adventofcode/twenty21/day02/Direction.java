@@ -5,7 +5,7 @@ public enum Direction {
     DOWN,
     UP;
 
-    protected static Direction forString(String name) {
+    static Direction fromString(String name) {
         return Direction.valueOf(name.toUpperCase());
     }
 }
