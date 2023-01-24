@@ -6,6 +6,6 @@ record PacketPair(Packet<?> left, Packet<?> right) {
     }
 
     public boolean compare() {
-        
+        return false; // TODO
     }
 }
