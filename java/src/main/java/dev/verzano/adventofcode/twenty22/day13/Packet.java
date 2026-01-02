@@ -2,73 +2,79 @@ package dev.verzano.adventofcode.twenty22.day13;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 sealed interface Packet<T> {
     static ListPacket fromString(String packetString) {
-        var rootPacket = new ListPacket(new LinkedList<>(), null);
-        var currPacket = rootPacket;
+        var rootList = new ListPacket(null);
+        var currList = rootList;
 
         var intBuilder = new StringBuilder();
-        // starting 1 in and ending one away to not deal with enclosing brackets
-        for (var i = 1; i < packetString.length() - 1; i++) {
+        for (var i = 1; i < packetString.length(); i++) {
             switch (packetString.charAt(i)) {
-                case '[' -> currPacket = new ListPacket(new LinkedList<>(), currPacket);
-                case ']' -> currPacket = currPacket.parent;
+                case '[' -> {
+                    var childList = currList.addChildList();
+                    currList = childList;
+                }
+                case ']' -> {
+                    if (!intBuilder.isEmpty()) {
+                        currList.addIntPacketFromString(intBuilder.toString());
+                        intBuilder = new StringBuilder();
+                    }
+                    currList = currList.parent;
+                }
                 case ',' -> {
-                    currPacket.addIntPacketFromString(intBuilder.toString());
-                    intBuilder = new StringBuilder();
+                    if (!intBuilder.isEmpty()) {
+                        currList.addIntPacketFromString(intBuilder.toString());
+                        intBuilder = new StringBuilder();
+                    }
                 }
                 default -> intBuilder.append(packetString.charAt(i));
             }
         }
-        return rootPacket;
+        return rootList;
     }
 
-    T getValue();
+    T value();
 
-    ListPacket getParent();
-
-    final class IntPacket implements Packet<Integer> {
-        final int value;
-        final ListPacket parent;
-
-        public IntPacket(int value, ListPacket parent) {
-            this.value = value;
-            this.parent = parent;
-        }
-
+    record IntPacket(Integer value, ListPacket parent) implements Packet<Integer> {
         @Override
-        public Integer getValue() {
-            return value;
-        }
-
-        @Override
-        public ListPacket getParent() {
-            return parent;
+        public String toString() {
+            return String.valueOf(value);
         }
     }
 
-    final class ListPacket implements Packet<List<Packet<?>>> {
-        final List<Packet<?>> value;
-        final ListPacket parent;
-
-        public ListPacket(List<Packet<?>> value, ListPacket parent) {
-            this.value = value;
-            this.parent = parent;
+    record ListPacket(List<Packet<?>> value, ListPacket parent) implements Packet<List<Packet<?>>> {
+        ListPacket(ListPacket parent) {
+            this(new LinkedList<>(), parent);
         }
 
-        public void addIntPacketFromString(String intString) {
+        Packet<?> get(int index) {
+            return value.get(index);
+        }
+
+        int size() {
+            return value.size();
+        }
+
+        ListPacket addChildList() {
+            var childList = new ListPacket(this);
+            value.add(childList);
+            return childList;
+        }
+
+        void addIntPacketFromString(String intString) {
             value.add(new IntPacket(Integer.parseInt(intString), this));
         }
 
         @Override
-        public List<Packet<?>> getValue() {
-            return value;
-        }
-
-        @Override
-        public ListPacket getParent() {
-            return parent;
+        public String toString() {
+            return "[" +
+                    value.stream()
+                            .map(Objects::toString)
+                            .collect(Collectors.joining(",")) +
+                    "]";
         }
     }
 }
